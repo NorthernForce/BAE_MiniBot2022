@@ -27,8 +27,8 @@ import frc.robot.commands.SetArm;
 import frc.robot.commands.IntakeGB;
 import frc.robot.commands.ExpellGB;
 import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.OnBoardIO;
-import frc.robot.subsystems.OnBoardIO.ChannelMode;
+//import frc.robot.subsystems.OnBoardIO;
+//import frc.robot.subsystems.OnBoardIO.ChannelMode;
 import frc.robot.subsystems.ServoArm;
 import frc.robot.subsystems.Intake;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -39,7 +39,7 @@ import edu.wpi.first.wpilibj.trajectory.TrajectoryGenerator;
 import edu.wpi.first.wpilibj.trajectory.constraint.DifferentialDriveVoltageConstraint;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
-import edu.wpi.first.wpilibj2.command.PrintCommand;
+//import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.RamseteCommand;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -53,7 +53,7 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final Drivetrain m_drivetrain = new Drivetrain();
-  private final OnBoardIO m_onboardIO = new OnBoardIO(ChannelMode.INPUT, ChannelMode.INPUT);
+  //private final OnBoardIO m_onboardIO = new OnBoardIO(ChannelMode.INPUT, ChannelMode.INPUT);
   private final ServoArm m_arm1 = new ServoArm(3);
   private final Intake m_intake = new Intake(mControl.intakePWM, mControl.intakeIN1Port, mControl.intakeIN2Port);
 
@@ -169,10 +169,10 @@ public class RobotContainer {
     //m_arm1.setDefaultCommand(getPositionArmCommand());
 
     // Example of how to use the onboard IO
-    Button onboardButtonA = new Button(m_onboardIO::getButtonAPressed);
-    onboardButtonA
-        .whenActive(new PrintCommand("Button A Pressed"))
-        .whenInactive(new PrintCommand("Button A Released"));
+    //Button onboardButtonA = new Button(m_onboardIO::getButtonAPressed);
+    // onboardButtonA
+    //     .whenActive(new PrintCommand("Button A Pressed"))
+    //     .whenInactive(new PrintCommand("Button A Released"));
 
     // Setup SmartDashboard options
     m_chooser.setDefaultOption("Ramsete Trajectory", generateRamseteCommand());
